@@ -189,9 +189,10 @@ interface PageProps {
   }
 }
 
-export default function TourPackagePage({ params }: PageProps) {
+export default async function TourPackagePage({ params }: PageProps) {
   // Find the tour package based on the slug
-  const tour = tourPackages.find((tour) => tour.slug === params.slug)
+  const { slug } = await params; // 👈 await params here
+  const tour = tourPackages.find((tour) => tour.slug === slug);
 
   // If tour not found, this would be replaced with a proper 404 page
   if (!tour) {
