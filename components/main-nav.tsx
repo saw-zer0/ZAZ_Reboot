@@ -1,11 +1,7 @@
 "use client"
-
-import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Mountain } from "lucide-react"
-
-import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -38,7 +34,7 @@ export function MainNav() {
     <div className="flex justify-between items-center py-4">
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2">
-          <Mountain className="h-6 w-6 text-emerald-600" />
+          <Mountain className="h-6 w-6 text-teal-600" />
           <span className="text-xl font-bold">Sworna Travels</span>
         </Link>
       </div>
@@ -60,11 +56,19 @@ export function MainNav() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Tour Packages</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                {tourPackages.map((package_, index) => (
-                  <ListItem key={index} title={package_.title} href={package_.href} />
-                ))}
-              </ul>
+              <div className="w-[400px] md:w-[500px] lg:w-[600px] bg-white rounded-md shadow-lg p-4">
+                <div className="grid md:grid-cols-2 gap-3">
+                  {tourPackages.map((pkg, index) => (
+                    <Link
+                      key={index}
+                      href={pkg.href}
+                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-teal-50 hover:to-blue-50 hover:text-teal-600"
+                    >
+                      <div className="text-sm font-medium">{pkg.title}</div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -80,36 +84,28 @@ export function MainNav() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Other Destinations</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4">
-                {otherDestinations.map((destination, index) => (
-                  <ListItem key={index} title={destination.title} href={destination.href} />
-                ))}
-              </ul>
+              <div className="w-[400px] bg-white rounded-md shadow-lg p-4">
+                <div className="grid gap-3">
+                  {otherDestinations.map((destination, index) => (
+                    <Link
+                      key={index}
+                      href={destination.href}
+                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-teal-50 hover:to-blue-50 hover:text-teal-600"
+                    >
+                      <div className="text-sm font-medium">{destination.title}</div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/contact" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     </div>
   )
 }
-
-const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className,
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = "ListItem"

@@ -16,7 +16,7 @@ export default function AboutPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-900/70 to-blue-900/70" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white">About Sworna Travels</h1>
         </div>
@@ -35,21 +35,21 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center mb-4">
+                <div className="h-16 w-16 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto flex items-center justify-center mb-4 text-white">
                   <Clock size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">15+ Years Experience</h3>
                 <p className="text-gray-600">Over a decade of expertise in crafting memorable travel experiences.</p>
               </div>
               <div className="text-center">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center mb-4">
+                <div className="h-16 w-16 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto flex items-center justify-center mb-4 text-white">
                   <Users size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">10,000+ Happy Clients</h3>
                 <p className="text-gray-600">Thousands of satisfied travelers from around the world.</p>
               </div>
               <div className="text-center">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center mb-4">
+                <div className="h-16 w-16 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto flex items-center justify-center mb-4 text-white">
                   <Mountain size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">100+ Destinations</h3>
@@ -63,7 +63,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 bg-amber-50">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px]">
@@ -120,12 +120,12 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-amber-50">
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-slate-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <Award className="h-12 w-12 text-emerald-600 mb-4" />
+              <Award className="h-12 w-12 text-teal-600 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Quality & Excellence</h3>
               <p className="text-gray-600">
                 We are committed to providing the highest quality services and exceeding our clients' expectations in
@@ -133,7 +133,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <MapPin className="h-12 w-12 text-emerald-600 mb-4" />
+              <MapPin className="h-12 w-12 text-teal-600 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Local Expertise</h3>
               <p className="text-gray-600">
                 Our deep local knowledge and connections ensure authentic experiences and insider access to the hidden
@@ -141,7 +141,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <Users className="h-12 w-12 text-emerald-600 mb-4" />
+              <Users className="h-12 w-12 text-teal-600 mb-4" />
               <h3 className="text-xl font-semibold mb-3">Responsible Tourism</h3>
               <p className="text-gray-600">
                 We are dedicated to sustainable practices that respect local communities, preserve cultural heritage,
@@ -153,14 +153,14 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-emerald-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Explore with Us?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Let us help you discover the wonders of Nepal, Bhutan, and Tibet. Our team is ready to create the perfect
             travel experience for you.
           </p>
-          <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100" asChild>
+          <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100" asChild>
             <Link href="/tour-packages">Explore Our Tour Packages</Link>
           </Button>
         </div>

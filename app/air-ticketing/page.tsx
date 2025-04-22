@@ -17,7 +17,7 @@ export default function AirTicketingPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-900/70 to-blue-900/70" />
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Air Ticketing</h1>
@@ -118,11 +118,11 @@ export default function AirTicketingPage() {
               ))}
             </div>
 
-            <div className="bg-slate-50 p-6 rounded-lg mb-8">
+            <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-lg mb-8">
               <h2 className="text-2xl font-bold mb-6">Why Book With Us?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex gap-3">
-                  <div className="h-10 w-10 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center shrink-0 text-white">
                     <Users size={20} />
                   </div>
                   <div>
@@ -131,7 +131,7 @@ export default function AirTicketingPage() {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="h-10 w-10 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center shrink-0 text-white">
                     <Calendar size={20} />
                   </div>
                   <div>
@@ -140,7 +140,7 @@ export default function AirTicketingPage() {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="h-10 w-10 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center shrink-0 text-white">
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -149,7 +149,7 @@ export default function AirTicketingPage() {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <div className="h-10 w-10 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="h-10 w-10 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full flex items-center justify-center shrink-0 text-white">
                     <Plane size={20} />
                   </div>
                   <div>

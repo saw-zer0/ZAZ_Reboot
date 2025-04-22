@@ -1,3 +1,4 @@
+import type React from "react"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
@@ -14,13 +15,17 @@ export const metadata = {
     generator: 'v0.dev'
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
-            <header className="container mx-auto px-4 border-b">
+            <header className="container mx-auto px-4 border-b relative z-50">
               <MainNav />
             </header>
             <div className="flex-1">{children}</div>

@@ -50,7 +50,7 @@ export default function BhutanToursPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-900/70 to-blue-900/70" />
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Bhutan Tours</h1>
@@ -286,7 +286,7 @@ export default function BhutanToursPage() {
                 <TourInquiryForm />
               </div>
 
-              <div className="mt-6 bg-teal-50 p-6 rounded-lg">
+              <div className="mt-6 bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">Why Visit Bhutan?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">

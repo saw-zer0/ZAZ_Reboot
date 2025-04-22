@@ -105,7 +105,7 @@ export default function TourPackagesPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-900/70 to-blue-900/70" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Tour Packages</h1>

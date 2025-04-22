@@ -17,14 +17,14 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-teal-900/70" />
           <div className="container relative z-10 mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Discover the Beauty of Nepal</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl">
               Experience breathtaking landscapes, rich cultures, and unforgettable adventures with Sworna Travels
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" asChild className="bg-emerald-600 hover:bg-emerald-700">
+              <Button size="lg" asChild className="bg-teal-600 hover:bg-teal-700">
                 <Link href="/tour-packages">Explore Tour Packages</Link>
               </Button>
               <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/20" asChild>
@@ -35,7 +35,7 @@ export default function Home() {
         </section>
 
         {/* Featured Destinations */}
-        <section className="py-16 bg-amber-50">
+        <section className="py-16 bg-gradient-to-b from-white to-slate-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Popular Destinations</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,7 +57,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center gap-2 text-emerald-600 mb-2">
+                    <div className="flex items-center gap-2 text-teal-600 mb-2">
                       <MapPin size={18} />
                       <span className="text-sm">{destination.location}</span>
                     </div>
@@ -70,7 +70,7 @@ export default function Home() {
                         ))}
                       <span className="text-sm text-gray-600 ml-2">5.0 (120 reviews)</span>
                     </div>
-                    <Button asChild className="w-full bg-emerald-600 hover:bg-emerald-700">
+                    <Button asChild className="w-full bg-teal-600 hover:bg-teal-700">
                       <Link href={`/tour-packages/${destination.name.toLowerCase().replace(/\s+/g, "-")}`}>
                         View Details
                       </Link>
@@ -80,7 +80,7 @@ export default function Home() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <Button asChild variant="outline" className="text-emerald-600 border-emerald-600 hover:bg-emerald-50">
+              <Button asChild variant="outline" className="text-teal-600 border-teal-600 hover:bg-teal-50">
                 <Link href="/tour-packages" className="inline-flex items-center gap-2">
                   View All Tour Packages <ArrowRight size={16} />
                 </Link>
@@ -95,38 +95,38 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center mb-4">
+                <div className="h-16 w-16 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto flex items-center justify-center mb-4 text-white">
                   <Mountain size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Trekking Packages</h3>
                 <p className="text-gray-600 mb-4">
                   Explore the majestic mountains of Nepal with our expertly designed trekking packages.
                 </p>
-                <Button asChild variant="link" className="text-emerald-600">
+                <Button asChild variant="link" className="text-teal-600">
                   <Link href="/tour-packages">Learn More</Link>
                 </Button>
               </div>
               <div className="text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center mb-4">
+                <div className="h-16 w-16 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto flex items-center justify-center mb-4 text-white">
                   <Plane size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Mountain Flights</h3>
                 <p className="text-gray-600 mb-4">
                   Experience the breathtaking Himalayan range from the sky with our mountain flight services.
                 </p>
-                <Button asChild variant="link" className="text-emerald-600">
+                <Button asChild variant="link" className="text-teal-600">
                   <Link href="/mountain-flight">Learn More</Link>
                 </Button>
               </div>
               <div className="text-center p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center mb-4">
+                <div className="h-16 w-16 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full mx-auto flex items-center justify-center mb-4 text-white">
                   <Plane className="rotate-45" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Air Ticketing</h3>
                 <p className="text-gray-600 mb-4">
                   Hassle-free domestic and international air ticketing services for your convenience.
                 </p>
-                <Button asChild variant="link" className="text-emerald-600">
+                <Button asChild variant="link" className="text-teal-600">
                   <Link href="/air-ticketing">Learn More</Link>
                 </Button>
               </div>
@@ -135,7 +135,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16 bg-amber-50">
+        <section className="py-16 bg-gradient-to-b from-slate-50 to-slate-100">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -166,7 +166,7 @@ export default function Home() {
                   </div>
                   <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold">
+                    <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">
                       {testimonial.name[0]}
                     </div>
                     <div>
@@ -181,14 +181,14 @@ export default function Home() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-emerald-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready for Your Next Adventure?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Contact us today to plan your dream trip to Nepal, Bhutan, or Tibet. Let us make your travel experience
               unforgettable.
             </p>
-            <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100" asChild>
+            <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100" asChild>
               <Link href="/contact">Plan Your Trip Now</Link>
             </Button>
           </div>
