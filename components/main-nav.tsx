@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Mountain } from "lucide-react"
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -34,7 +35,14 @@ export function MainNav() {
     <div className="flex justify-between items-center py-4">
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2">
-          <Mountain className="h-6 w-6 text-teal-600" />
+          <Image
+            src="/icons/sworna-logo.png" // make sure it's placed under /public/icons/
+            alt="Sworna Travels Logo"
+            width={160} // adjust based on how large you want it
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority // load this image immediately
+          />
           <span className="text-xl font-bold">Sworna Travels</span>
         </Link>
       </div>
