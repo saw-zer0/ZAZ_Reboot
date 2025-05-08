@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Mail, MapPin, Phone } from "lucide-react"
 
-import { TourInquiryForm } from "@/components/tour-inquiry-form"
+import { TourInquiryForm } from "@/components/forms/tour-inquiry-form"
 
 export default function ContactPage() {
   return (

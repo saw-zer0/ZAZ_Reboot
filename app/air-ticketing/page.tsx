@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Calendar, CheckCircle, MapPin, Plane, Users } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { TourInquiryForm } from "@/components/tour-inquiry-form"
+import { TourInquiryForm } from "@/components/forms/tour-inquiry-form"
 
 export default function AirTicketingPage() {
   return (
