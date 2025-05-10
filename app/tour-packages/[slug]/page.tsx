@@ -16,16 +16,25 @@ export default function TourPackagePage() {
 
   if (!tour) return <div>Tour package not found</div>;
 
+  // Normalize the images array
+  const normalizedImages = tour.images.map((image) =>
+    typeof image === "string"
+      ? { src: image, credit: { name: "Unknown", url: "#" } } // Default credit for string images
+      : { ...image, credit: { ...image.credit, url: image.credit.url || "#" } }
+  );
 
   return (
     <main className="flex-1">
-      <HeroSection title={tour.name} location={tour.location} image={tour.images[0]} />
+      <HeroSection
+        title={tour.name}
+        location={tour.location}
+        image={typeof tour.images[1] === "string" ? tour.images[1] : tour.images[1]?.src}
+      />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tour Content - Takes up 2/3 of the space on desktop */}
           <div className="lg:col-span-2">
-            {/* Tour Gallery */}
-            <TourGallery images={tour.images} alt={tour.name} />
+            <TourGallery images={normalizedImages} alt={tour.name} />
             <TourQuickInfo
               duration={tour.duration}
               maxGroupSize={tour.maxGroupSize}
@@ -36,7 +45,7 @@ export default function TourPackagePage() {
           </div>
           {/* Sidebar - Takes up 1/3 of the space on desktop */}
           <div className="lg:col-span-1">
-              <TourInquiryForm />
+            <TourInquiryForm />
           </div>
         </div>
 

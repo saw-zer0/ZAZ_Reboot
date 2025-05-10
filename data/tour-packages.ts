@@ -82,16 +82,215 @@ export const tourPackages = [
       excludes: ["International airfare to/from Kathmandu", "Nepal visa fee"],
     },
     images: [
-      "/images/tour-package/everest-basecamp/sylwia-bartyzel-utVHtWF73kg-unsplash.jpg",
-      "/images/tour-package/everest-basecamp/sebastian-pena-lambarri-Wj9ELwGXa6c-unsplash.jpg",
-      "/images/tour-package/everest-basecamp/michael-clarke-GVpAB2mHwkw-unsplash.jpg",
-      "/images/tour-package/everest-basecamp/mari-partyka-PLzgu9O7xag-unsplash.jpg",
-      "/images/tour-package/everest-basecamp/ananya-bilimale-xdvM7wDXZy4-unsplash.jpg"
+      {
+        src: "/images/tour-package/everest-basecamp/michael-clarke-GVpAB2mHwkw-unsplash.jpg",
+        credit: {
+          name: "Michael Clarke",
+          url: "https://unsplash.com/@michaelclarke"
+        }
+      },
+      {
+        src: "/images/tour-package/everest-basecamp/sylwia-bartyzel-utVHtWF73kg-unsplash.jpg",
+        credit: {
+          name: "Sylwia Bartyzel",
+        }
+      },
+      {
+        src: "/images/tour-package/everest-basecamp/sebastian-pena-lambarri-Wj9ELwGXa6c-unsplash.jpg",
+        credit: {
+          name: "Sebastian Pena Lambarri",
+          url: "https://unsplash.com/@sebaspenalambarri"
+        }
+      },
+      {
+        src: "/images/tour-package/everest-basecamp/mari-partyka-PLzgu9O7xag-unsplash.jpg",
+        credit: {
+          name: "Mari Partyka",
+          url: "https://unsplash.com/@mari_partyka"
+        }
+      },
+      {
+        src: "/images/tour-package/everest-basecamp/ananya-bilimale-xdvM7wDXZy4-unsplash.jpg",
+        credit: {
+          name: "ananya bilimale",
+          url: "https://unsplash.com/@ananyabilimale"
+        }
+      },
+
     ],
     relatedPackages: [
       { slug: "annapurna-circuit", name: "Annapurna Circuit Trek" },
       { slug: "langtang-valley", name: "Langtang Valley Trek" },
       { slug: "manaslu-circuit", name: "Manaslu Circuit Trek" },
+      { slug: "ghorepani-poon-hill", name: "Ghorepani Poon Hill Trek" },
+      { slug: "everest-gokyo", name: "Everest Gokyo Lakes Trek" },
+    ],
+  },
+
+  {
+    slug: "annapurna-circuit",
+    name: "Annapurna Circuit Trek",
+    location: "Annapurna Region, Nepal",
+    duration: "15 days",
+    maxGroupSize: 10,
+    difficulty: "Moderate to Hard",
+    bestSeason: "March-May & Sept-Nov",
+    about: "The Annapurna Circuit Trek is a classic trek in the Annapurna region of Nepal, offering stunning views of the Annapurna massif and diverse landscapes. This trek takes you through lush subtropical forests, high-altitude deserts, and traditional villages. Experience the rich culture of the Gurung and Thakali people while enjoying breathtaking views of Annapurna, Dhaulagiri, and Machapuchare.",
+    itinerary: [
+      { day: 1,
+        title: "Arrival in Kathmandu (1,400m)", 
+        description: "Welcome at the airport and transfer to hotel." 
+      },
+      {
+        day: 2,
+        title: "Drive to Besishahar (760m) & trek to Bahundanda (1,130m)",
+        description:
+          "Drive to Besishahar followed by a short trek to Bahundanda village.",
+      },
+      // Other days...
+    ],
+    cost: {
+      price: "$1,600 per person",
+      includes: ["Airport transfers in Kathmandu", "3 nights accommodation in Kathmandu with breakfast"],
+      excludes: ["International airfare to/from Kathmandu", "Nepal visa fee"],
+    },
+    images: [
+      {
+        src: "/images/tour-package/annapurna-circuit/swarup-sapkota-tbRmaPzRdwA-unsplash.jpg",
+        credit: {
+          name: "Swarup Sapkota",
+          url: "https://unsplash.com/@swarupsapkota"
+        }
+      },
+      {
+        src: "/images/tour-package/annapurna-circuit/giuseppe-mondi-xyE1p1rG04U-unsplash.jpg",
+        credit: {
+          name: "Giuseppe Mondi",
+          url: "https://unsplash.com/@giuseppemondi"
+        }
+      },
+      {
+        src: "/images/tour-package/annapurna-circuit/le-tan-qziIV0_vCGQ-unsplash.jpg",
+        credit: {
+          name: "Le Tan",
+          url: "https://unsplash.com/@letan"
+        }
+      },
+      {
+        src: "/images/tour-package/annapurna-circuit/mo-jiaming-eLfQNcL7HHo-unsplash.jpg",
+        credit: {
+          name: "Mo Jiaming",
+          url: "https://unsplash.com/@mojiaming"
+        }
+      },
+      {
+        src: "/images/tour-package/annapurna-circuit/neha-maheen-mahfin-pd4fqat25AU-unsplash.jpg",
+        credit: {
+          name: "Neha Maheen Mahfin",
+          url: "https://unsplash.com/@nehamahfin"
+        }
+      },
+    ],
+    relatedPackages: [
+      { 
+        slug: "everest-base-camp", 
+        name: "Everest Base Camp Trek", 
+        image: "/images/tour-package/everest-basecamp/sylwia-bartyzel-utVHtWF73kg-unsplash.jpg" 
+      },
+      {
+        slug: "annapurna-base-camp",
+        name: "Annapurna Base Camp Trek",
+        image: "/images/tour-package/annapurna-circuit/le-tan-qziIV0_vCGQ-unsplash.jpg"
+      },
+      {
+        slug: "langtang-valley", 
+        name: "Langtang Valley Trek",   
+        image: "/images/tour-package/langtang-valley/jayant-chaudhary-FVawr_3B1ww-unsplash.jpg"
+      }
+    ],
+  },
+
+
+  {
+    slug: "langtang-valley",
+    name: "Langtang Valley Trek",
+    location: "Langtang, Nepal",
+    duration: "15 days",
+    maxGroupSize: 10,
+    difficulty: "Moderate",
+    bestSeason: "March-May & Sept-Nov",
+    about: "The Langtang Valley Trek is a beautiful trek in the Langtang region of Nepal, known for its stunning mountain views and rich Tamang culture. This trek takes you through lush forests, traditional villages, and high alpine meadows. Experience the unique culture of the Tamang people while enjoying breathtaking views of Langtang Lirung, Ganesh Himal, and the surrounding peaks.",
+    itinerary: [
+      { day: 1,
+        title: "Arrival in Kathmandu (1,400m)", 
+        description: "Welcome at the airport and transfer to hotel." 
+      },
+      {
+        day: 2,
+        title: "Drive to Besishahar (760m) & trek to Bahundanda (1,130m)",
+        description:
+          "Drive to Besishahar followed by a short trek to Bahundanda village.",
+      },
+      // Other days...
+    ],
+    cost: {
+      price: "$1,600 per person",
+      includes: ["Airport transfers in Kathmandu", "3 nights accommodation in Kathmandu with breakfast"],
+      excludes: ["International airfare to/from Kathmandu", "Nepal visa fee"],
+    },
+    images: [
+      {
+        src: "/images/tour-package/langtang-valley/jayant-chaudhary-FVawr_3B1ww-unsplash.jpg",
+        credit: {
+          name: "Jayant Chaudhary",
+          url: "https://unsplash.com/@jayantchaudhary"
+        }
+      },
+      {
+        src: "/images/tour-package/langtang-valley/jayant-chaudhary-5whVEe_PZz0-unsplash.jpg",
+        credit: {
+          name: "Jayant Chaudhary",
+          url: "https://unsplash.com/@jayantchaudhary"
+        }
+      },
+      {
+        src: "/images/tour-package/langtang-valley/kabi-acharya--fq2UH77F6c-unsplash.jpg",
+        credit: {
+          name: "Kabi Acharya",
+          url: "https://unsplash.com/@kabi_acharya"
+        }
+      },
+      {
+        src: "/images/tour-package/langtang-valley/kim-cordenete-WkMM-5ogQDs-unsplash.jpg",
+        credit: {
+          name: "Kim Cordenete",
+          url: "https://unsplash.com/@mojiaming"
+        }
+      },
+      {
+        src: "/images/tour-package/langtang-valley/mary-anne-h-vq2Xg4OKlWc-unsplash.jpg",
+        credit: {
+          name: "Mary Anne H",
+          url: "https://unsplash.com/@maryanneh"
+        }
+      },
+    ],
+    relatedPackages: [
+      { 
+        slug: "everest-base-camp", 
+        name: "Everest Base Camp Trek", 
+        image: "/images/tour-package/everest-basecamp/sylwia-bartyzel-utVHtWF73kg-unsplash.jpg" 
+      },
+      {
+        slug: "annapurna-base-camp",
+        name: "Annapurna Base Camp Trek",
+        image: "/images/tour-package/annapurna-circuit/le-tan-qziIV0_vCGQ-unsplash.jpg"
+      },
+      {
+        slug: "langtang-valley", 
+        name: "Langtang Valley Trek",   
+        image: "/images/tour-package/langtang-valley/jayant-chaudhary-FVawr_3B1ww-unsplash.jpg"
+      }
     ],
   },
   // Other tour packages...
