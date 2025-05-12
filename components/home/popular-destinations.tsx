@@ -5,24 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Star, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-const destinations = [
-  {
-    name: "Everest Base Camp",
-    location: "Solukhumbu",
-    image: "/placeholder.svg?height=600&width=800",
-  },
-  {
-    name: "Annapurna Circuit",
-    location: "Annapurna",
-    image: "/placeholder.svg?height=600&width=800",
-  },
-  {
-    name: "Chitwan National Park",
-    location: "Chitwan",
-    image: "/placeholder.svg?height=600&width=800",
-  },
-]
+import { destinations } from "@/data/popular-destinations"
 
 export function PopularDestinations() {
   return (
@@ -67,7 +50,7 @@ export function PopularDestinations() {
           ))}
         </div>
 
-        {/* ➕ Add this missing part */}
+        {/* Add this missing part */}
         <div className="text-center mt-12">
           <Button asChild variant="outline" className="text-teal-600 border-teal-600 hover:bg-teal-50">
             <Link href="/tour-packages" className="inline-flex items-center gap-2">
