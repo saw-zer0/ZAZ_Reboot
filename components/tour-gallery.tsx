@@ -7,8 +7,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
+interface ImageWithCredit {
+  src: string
+  credit: {
+    name: string
+    url: string
+  }
+}
+
 interface TourGalleryProps {
-  images: string[]
+  images: ImageWithCredit[]
   alt: string
 }
 
@@ -32,12 +40,27 @@ export function TourGallery({ images, alt }: TourGalleryProps) {
       {/* Main Image */}
       <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
         <Image
-          src={images[activeIndex] || "/placeholder.svg"}
+          src={images[activeIndex]?.src || "/placeholder.svg"}
           alt={`${alt} - Image ${activeIndex + 1}`}
           fill
           className="object-cover"
           priority
         />
+
+        {/* Overlay credit text */}
+        {images[activeIndex]?.credit && (
+          <div className="absolute bottom-0 right-0 bg-black/50 text-white text-xs px-2 py-1">
+            Photo by{" "}
+            <a
+              href={images[activeIndex].credit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              {images[activeIndex].credit.name}
+            </a>
+          </div>
+        )}
         <div className="absolute inset-0 flex items-center justify-between px-4">
           <Button
             variant="outline"
@@ -72,7 +95,12 @@ export function TourGallery({ images, alt }: TourGalleryProps) {
                 activeIndex === index ? "border-teal-600" : "border-transparent",
               )}
             >
-              <Image src={image || "/placeholder.svg"} alt={`Thumbnail ${index + 1}`} fill className="object-cover" />
+            <Image
+              src={image?.src || "/placeholder.svg"}
+              alt={`Thumbnail ${index + 1}`}
+              fill
+              className="object-cover"
+            />
             </button>
           ))}
         </div>

@@ -4,7 +4,7 @@ import { CalendarDays, Clock, MapPin, Users } from "lucide-react"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { TourGallery } from "@/components/tour-gallery"
-import { TourInquiryForm } from "@/components/tour-inquiry-form"
+import { TourInquiryForm } from "@/components/forms/tour-inquiry-form"
 import { Button } from "@/components/ui/button"
 
 export default function TibetToursPage() {
