@@ -160,17 +160,17 @@ export function HeroSection() {
               </>
             ) : (
               <>
-                {/* Split layout for first two slides - 65% images, 35% text */}
-                <div className="hidden lg:flex container mx-auto h-full items-center relative">
-                  {/* Image section - 65% width with slanted container */}
+                {/* Split layout for first two slides - 65% images, 50% text */}
+                <div className="hidden md-flex container mx-auto h-full items-center relative max-w-[1200px]">
+                  {/* Image section - 65% width with better positioned images */}
                   <div
                     className={`w-[65%] h-full flex items-center justify-center relative z-10 ${
                       slide.imagePosition === "right" ? "order-2" : "order-1"
                     }`}
                   >
-                    <div className="relative w-full max-w-[600px] h-[90%] transform rotate-12 bg-gradient-to-br from-brand-primary-500 to-brand-secondary-600 rounded-[3rem] p-5 shadow-2xl">
-                      {/* First image - larger and more prominent */}
-                      <div className="absolute top-4 left-4 w-full h-[80%] rounded-2xl overflow-hidden shadow-lg z-20 transform -rotate-10 ">
+                    <div className="relative w-full max-w-[600px] h-[90%] transform rotate-12 bg-gradient-to-br from-brand-primary-500 to-brand-secondary-600 rounded-[3rem] p-6 shadow-2xl">
+                      {/* First image - positioned for better visibility */}
+                      <div className="absolute top-6 left-8 w-[70%] h-[65%] rounded-2xl overflow-hidden shadow-lg z-20 transform -rotate-16">
                         <Image
                           src={slide.images[0] || "/placeholder.svg"}
                           alt={`${slide.title} - Image 1`}
@@ -180,11 +180,22 @@ export function HeroSection() {
                         />
                       </div>
 
-                      {/* Second image - overlapping */}
-                      <div className="absolute bottom-4 right-4 w-[80%] h-full rounded-2xl overflow-hidden shadow-lg z-10 transform rotate-6">
+                      {/* Second image - positioned with minimal overlap */}
+                      <div className="absolute bottom-6 right-8 w-[70%] h-[65%] rounded-2xl overflow-hidden shadow-lg z-15 transform rotate-8">
                         <Image
                           src={slide.images[1] || "/placeholder.svg"}
                           alt={`${slide.title} - Image 2`}
+                          fill
+                          className="object-cover"
+                          priority={i === 0}
+                        />
+                      </div>
+
+                      {/* Third smaller accent image for visual interest */}
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[45%] h-[40%] rounded-xl overflow-hidden shadow-md z-10 rotate-3 opacity-90">
+                        <Image
+                          src={slide.images[0] || "/placeholder.svg"}
+                          alt={`${slide.title} - Accent`}
                           fill
                           className="object-cover"
                           priority={i === 0}
@@ -198,9 +209,9 @@ export function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Text section w-60% width with light background for first two slides */}
+                  {/* Text section - 50% width with light background for first two slides */}
                   <div
-                    className={`h-full flex items-center px-4 relative z-20 ${
+                    className={`w-[50%] h-full flex items-center px-4 relative z-20 ${
                       slide.imagePosition === "right" ? "order-1 ml-6" : "order-2 mr-6"
                     }`}
                   >
@@ -238,12 +249,13 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Mobile layout - stacked */}
-                <div className="lg:hidden absolute inset-0 flex flex-col items-center justify-center z-30">
-                  {/* Mobile image section - increased to 70% height */}
+                {/* Mobile layout - stacked with better image positioning */}
+                <div className="md-hidden absolute inset-0 flex flex-col items-center justify-center z-30">
+                  {/* Mobile image section - improved layout */}
                   <div className="w-full h-[70%] flex items-center justify-center px-4">
-                    <div className="relative w-[320px] h-[350px] transform rotate-12 bg-gradient-to-br from-brand-primary-500 to-brand-secondary-600 rounded-[2rem] p-3 shadow-2xl">
-                      <div className="absolute top-2 left-2 w-[220px] h-[200px] rounded-xl overflow-hidden shadow-lg z-20 transform -rotate-6">
+                    <div className="relative w-[340px] h-[380px] transform rotate-12 bg-gradient-to-br from-brand-primary-500 to-brand-secondary-600 rounded-[2rem] p-4 shadow-2xl">
+                      {/* First image - better positioned */}
+                      <div className="absolute top-4 left-6 w-[200px] h-[180px] rounded-xl overflow-hidden shadow-lg z-20 transform -rotate-6">
                         <Image
                           src={slide.images[0] || "/placeholder.svg"}
                           alt={`${slide.title} - Image 1`}
@@ -252,10 +264,23 @@ export function HeroSection() {
                           priority={i === 0}
                         />
                       </div>
-                      <div className="absolute bottom-2 right-2 w-[220px] h-[200px] rounded-xl overflow-hidden shadow-lg z-10 transform rotate-6">
+
+                      {/* Second image - less overlap */}
+                      <div className="absolute bottom-4 right-6 w-[200px] h-[180px] rounded-xl overflow-hidden shadow-lg z-15 transform rotate-6">
                         <Image
                           src={slide.images[1] || "/placeholder.svg"}
                           alt={`${slide.title} - Image 2`}
+                          fill
+                          className="object-cover"
+                          priority={i === 0}
+                        />
+                      </div>
+
+                      {/* Small accent image */}
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[100px] rounded-lg overflow-hidden shadow-md z-10 rotate-2 opacity-85">
+                        <Image
+                          src={slide.images[0] || "/placeholder.svg"}
+                          alt={`${slide.title} - Accent`}
                           fill
                           className="object-cover"
                           priority={i === 0}
