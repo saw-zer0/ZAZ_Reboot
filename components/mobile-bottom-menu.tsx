@@ -111,7 +111,7 @@ export function MobileBottomMenu({ isOpen, onClose }: MobileBottomMenuProps) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
+    <div className="fixed inset-0 z-50 md:hidden">
       {/* Backdrop with animated blur */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300"

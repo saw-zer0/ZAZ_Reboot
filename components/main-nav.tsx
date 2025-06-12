@@ -46,7 +46,7 @@ export function MainNav() {
       </div>
 
       {/* Desktop Navigation - Hidden on mobile since we use floating button */}
-      <NavigationMenu className="hidden lg:flex">
+      <NavigationMenu className="hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>

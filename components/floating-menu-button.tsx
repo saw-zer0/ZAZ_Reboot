@@ -11,7 +11,7 @@ export function FloatingMenuButton() {
   return (
     <>
       {/* Floating Menu Button - Always visible on mobile */}
-      <div className="fixed bottom-6 right-6 z-50 lg:hidden">
+      <div className="fixed bottom-6 right-6 z-50 md:hidden">
         {/* Animated pulse ring */}
         <div
           className={`absolute inset-0 rounded-full ${isHovered ? "animate-ping opacity-30" : "opacity-0"} bg-gradient-to-r from-pink-500 to-purple-600 transition-opacity duration-300`}
