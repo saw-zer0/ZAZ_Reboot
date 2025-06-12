@@ -41,7 +41,6 @@ export function MainNav() {
             className="h-8 w-auto object-contain sm:h-10"
             priority
           />
-          
         </Link>
       </div>
 
@@ -62,16 +61,54 @@ export function MainNav() {
             <NavigationMenuTrigger>Tour Packages</NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="w-[400px] md:w-[500px] lg:w-[600px] bg-white rounded-md shadow-lg p-4">
-                <div className="grid md:grid-cols-2 gap-3">
-                  {tourPackages.map((pkg, index) => (
-                    <Link
-                      key={index}
-                      href={pkg.href}
-                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
-                    >
-                      <div className="text-sm font-medium">{pkg.title}</div>
-                    </Link>
-                  ))}
+                <div className="space-y-4">
+                  {/* Nepal Treks Section */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-emerald-700 mb-2 px-3">Nepal Treks</h4>
+                    <div className="h-px bg-gray-200 mb-3"></div>
+                    <div className="grid md:grid-cols-2 gap-3">
+                      {tourPackages.map((pkg, index) => (
+                        <Link
+                          key={index}
+                          href={pkg.href}
+                          className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
+                        >
+                          <div className="text-sm font-medium">{pkg.title}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Mountain Flight Section */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-emerald-700 mb-2 px-3">Mountain Experiences</h4>
+                    <div className="h-px bg-gray-200 mb-3"></div>
+                    <div className="grid gap-3">
+                      <Link
+                        href="/mountain-flight"
+                        className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
+                      >
+                        <div className="text-sm font-medium">Mountain Flight</div>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Other Destinations Section */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-emerald-700 mb-2 px-3">International Destinations</h4>
+                    <div className="h-px bg-gray-200 mb-3"></div>
+                    <div className="grid gap-3">
+                      {otherDestinations.map((destination, index) => (
+                        <Link
+                          key={index}
+                          href={destination.href}
+                          className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
+                        >
+                          <div className="text-sm font-medium">{destination.title}</div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </NavigationMenuContent>
@@ -82,32 +119,9 @@ export function MainNav() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/mountain-flight" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Mountain Flight</NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
             <Link href="/air-ticketing" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>Air Ticketing</NavigationMenuLink>
             </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Other Destinations</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className="w-[400px] bg-white rounded-md shadow-lg p-4">
-                <div className="grid gap-3">
-                  {otherDestinations.map((destination, index) => (
-                    <Link
-                      key={index}
-                      href={destination.href}
-                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
-                    >
-                      <div className="text-sm font-medium">{destination.title}</div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/visa-application" legacyBehavior passHref>

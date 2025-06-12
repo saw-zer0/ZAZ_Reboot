@@ -45,29 +45,62 @@ export function MobileNav({ tourPackages, otherDestinations }) {
             <AccordionItem value="tour-packages" className="border-0">
               <AccordionTrigger className="text-lg font-medium py-0">Tour Packages</AccordionTrigger>
               <AccordionContent>
-                <div className="flex flex-col gap-3 pl-4 mt-2">
-                  {tourPackages.map((package_, index) => (
-                    <Link
-                      key={index}
-                      href={package_.href}
-                      onClick={() => setOpen(false)}
-                      className="transition-colors hover:text-emerald-600"
-                    >
-                      {package_.title}
-                    </Link>
-                  ))}
+                <div className="flex flex-col gap-4 pl-4 mt-2">
+                  {/* Nepal Treks Section */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-emerald-700 mb-2">Nepal Treks</h4>
+                    <div className="h-px bg-gray-200 mb-3"></div>
+                    <div className="flex flex-col gap-3 pl-2">
+                      {tourPackages.map((package_, index) => (
+                        <Link
+                          key={index}
+                          href={package_.href}
+                          onClick={() => setOpen(false)}
+                          className="transition-colors hover:text-emerald-600"
+                        >
+                          {package_.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Mountain Flight Section */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-emerald-700 mb-2">Mountain Experiences</h4>
+                    <div className="h-px bg-gray-200 mb-3"></div>
+                    <div className="flex flex-col gap-3 pl-2">
+                      <Link
+                        href="/mountain-flight"
+                        onClick={() => setOpen(false)}
+                        className="transition-colors hover:text-emerald-600"
+                      >
+                        Mountain Flight
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Other Destinations Section */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-emerald-700 mb-2">International Destinations</h4>
+                    <div className="h-px bg-gray-200 mb-3"></div>
+                    <div className="flex flex-col gap-3 pl-2">
+                      {otherDestinations.map((destination, index) => (
+                        <Link
+                          key={index}
+                          href={destination.href}
+                          onClick={() => setOpen(false)}
+                          className="transition-colors hover:text-emerald-600"
+                        >
+                          {destination.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
 
-          <Link
-            href="/mountain-flight"
-            onClick={() => setOpen(false)}
-            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
-          >
-            Mountain Flight
-          </Link>
           <Link
             href="/air-ticketing"
             onClick={() => setOpen(false)}
@@ -75,26 +108,6 @@ export function MobileNav({ tourPackages, otherDestinations }) {
           >
             Air Ticketing
           </Link>
-
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="other-destinations" className="border-0">
-              <AccordionTrigger className="text-lg font-medium py-0">Other Destinations</AccordionTrigger>
-              <AccordionContent>
-                <div className="flex flex-col gap-3 pl-4 mt-2">
-                  {otherDestinations.map((destination, index) => (
-                    <Link
-                      key={index}
-                      href={destination.href}
-                      onClick={() => setOpen(false)}
-                      className="transition-colors hover:text-emerald-600"
-                    >
-                      {destination.title}
-                    </Link>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
         </div>
       </SheetContent>
     </Sheet>
