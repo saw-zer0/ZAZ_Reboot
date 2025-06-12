@@ -161,7 +161,7 @@ export function HeroSection() {
             ) : (
               <>
                 {/* Split layout for first two slides - 65% images, 50% text */}
-                <div className="hidden md-flex container mx-auto h-full items-center relative max-w-[1200px]">
+                <div className="hidden md:flex container mx-auto h-full items-center relative max-w-[1200px]">
                   {/* Image section - 65% width with better positioned images */}
                   <div
                     className={`w-[65%] h-full flex items-center justify-center relative z-10 ${
@@ -250,7 +250,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Mobile layout - stacked with better image positioning */}
-                <div className="md-hidden absolute inset-0 flex flex-col items-center justify-center z-30">
+                <div className="md:hidden absolute inset-0 flex flex-col items-center justify-center z-30">
                   {/* Mobile image section - improved layout */}
                   <div className="w-full h-[70%] flex items-center justify-center px-4">
                     <div className="relative w-[340px] h-[380px] transform rotate-12 bg-gradient-to-br from-brand-primary-500 to-brand-secondary-600 rounded-[2rem] p-4 shadow-2xl">
