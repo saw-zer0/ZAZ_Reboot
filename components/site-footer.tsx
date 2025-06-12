@@ -3,16 +3,16 @@ import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-white pt-12 pb-6">
+    <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-white pt-8 sm:pt-12 pb-4 sm:pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Sworna Travels</h3>
-            <p className="text-gray-400 mb-4">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Sworna Travels</h3>
+            <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
               Providing exceptional travel experiences in Nepal, Bhutan, and Tibet since 2005.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
               <Link href="https://facebook.com" className="hover:text-teal-400 transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
@@ -103,19 +103,19 @@ export function SiteFooter() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-teal-400 shrink-0 mt-1" />
-                <span className="text-gray-400">Thamel, Kathmandu, Nepal</span>
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Contact Us</h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="flex items-start gap-2 sm:gap-3">
+                <MapPin size={18} className="sm:w-5 sm:h-5 text-teal-400 shrink-0 mt-1" />
+                <span className="text-sm sm:text-base text-gray-400">Thamel, Kathmandu, Nepal</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-teal-400 shrink-0" />
-                <span className="text-gray-400">+977 1 4444444</span>
+              <li className="flex items-center gap-2 sm:gap-3">
+                <Phone size={18} className="sm:w-5 sm:h-5 text-teal-400 shrink-0" />
+                <span className="text-sm sm:text-base text-gray-400">+977 1 4444444</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={20} className="text-teal-400 shrink-0" />
-                <span className="text-gray-400">info@swornatravels.com</span>
+              <li className="flex items-center gap-2 sm:gap-3">
+                <Mail size={18} className="sm:w-5 sm:h-5 text-teal-400 shrink-0" />
+                <span className="text-sm sm:text-base text-gray-400">info@swornatravels.com</span>
               </li>
             </ul>
           </div>

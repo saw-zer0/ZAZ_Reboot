@@ -13,30 +13,30 @@ export function MobileNav({ tourPackages, otherDestinations }) {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild className="md:hidden">
+      <SheetTrigger asChild className="lg:hidden">
         <Button variant="ghost" size="icon">
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[80%] sm:max-w-sm">
-        <div className="flex items-center gap-2 pb-4 pt-2">
+      <SheetContent side="left" className="w-[85%] max-w-sm p-0">
+        <div className="flex items-center gap-2 p-6 border-b">
           <Mountain className="h-6 w-6 text-emerald-600" />
           <span className="text-xl font-bold">Sworna Travels</span>
         </div>
 
-        <div className="flex flex-col gap-4 mt-4">
+        <div className="flex flex-col gap-2 p-6">
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium transition-colors hover:text-emerald-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
           >
             Home
           </Link>
           <Link
             href="/about"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium transition-colors hover:text-emerald-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
           >
             About
           </Link>
@@ -64,14 +64,14 @@ export function MobileNav({ tourPackages, otherDestinations }) {
           <Link
             href="/mountain-flight"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium transition-colors hover:text-emerald-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
           >
             Mountain Flight
           </Link>
           <Link
             href="/air-ticketing"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium transition-colors hover:text-emerald-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
           >
             Air Ticketing
           </Link>

@@ -1,36 +1,41 @@
 import type React from "react"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
+import { ThemeProvider } from "@/components/theme-provider"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
-import { ThemeProvider } from "@/components/theme-provider"
+import { FloatingMenuButton } from "@/components/floating-menu-button"
+import { MobileBottomMenu } from "@/components/mobile-bottom-menu"
+import { PageTransition } from "@/components/page-transition"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Sworna Travels - Explore Nepal, Bhutan and Tibet",
-  description:
-    "Experience the beauty of the Himalayas with Sworna Travels. We offer trekking, tours, mountain flights, and air ticketing services.",
+export const metadata: Metadata = {
+  title: "Sworna Travels - Your Gateway to Nepal",
+  description: "Discover Nepal with Sworna Travels. Expert trekking guides, cultural tours, and adventure packages.",
     generator: 'v0.dev'
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-screen flex-col">
-            <header className="container mx-auto px-4 border-b relative z-50">
-              <MainNav />
-            </header>
-            <div className="flex-1">{children}</div>
+          <div className="relative flex min-h-screen flex-col">
+            <MainNav />
+            <PageTransition>{children}</PageTransition>
             <SiteFooter />
+            <FloatingMenuButton />
+            <MobileBottomMenu />
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

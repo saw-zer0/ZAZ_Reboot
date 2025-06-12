@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Award, Clock, MapPin, Mountain, Users } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { CertificationsSection } from "@/components/certifications-section"
+import { EmployeeProfilesSection } from "@/components/employee-profiles-section"
 
 export default function AboutPage() {
   return (
@@ -96,28 +98,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { name: "Rajesh Sharma", position: "Founder & CEO", image: "/placeholder.svg?height=500&width=500" },
-              { name: "Sunita Gurung", position: "Operations Manager", image: "/placeholder.svg?height=500&width=500" },
-              { name: "Karma Sherpa", position: "Head Trekking Guide", image: "/placeholder.svg?height=500&width=500" },
-              { name: "Pema Lama", position: "Customer Relations", image: "/placeholder.svg?height=500&width=500" },
-            ].map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="relative h-64 mb-4 rounded-lg overflow-hidden">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                </div>
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-gray-600">{member.position}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Employee Profiles Section */}
+      <EmployeeProfilesSection />
+
+      {/* Certifications Section */}
+      <CertificationsSection showTitle={true} />
 
       {/* Our Values */}
       <section className="py-16 bg-gradient-to-b from-slate-50 to-slate-100">

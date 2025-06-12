@@ -1,8 +1,7 @@
 "use client"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Mountain } from "lucide-react"
-import Image from "next/image";
+import Image from "next/image"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,7 +11,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { MobileNav } from "@/components/mobile-nav"
 
 export function MainNav() {
   const pathname = usePathname()
@@ -36,20 +34,19 @@ export function MainNav() {
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/icons/sworna-logo.png" // make sure it's placed under /public/icons/
+            src="/icons/sworna-logo.png"
             alt="Sworna Travels Logo"
-            width={160} // adjust based on how large you want it
-            height={40}
-            className="h-10 w-auto object-contain"
-            priority // load this image immediately
+            width={120}
+            height={30}
+            className="h-8 w-auto object-contain sm:h-10"
+            priority
           />
-          <span className="text-xl font-bold">Sworna Travels</span>
+          
         </Link>
       </div>
 
-      <MobileNav tourPackages={tourPackages} otherDestinations={otherDestinations} />
-
-      <NavigationMenu className="hidden md:flex">
+      {/* Desktop Navigation - Hidden on mobile since we use floating button */}
+      <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
@@ -70,7 +67,7 @@ export function MainNav() {
                     <Link
                       key={index}
                       href={pkg.href}
-                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-teal-50 hover:to-blue-50 hover:text-teal-600"
+                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
                     >
                       <div className="text-sm font-medium">{pkg.title}</div>
                     </Link>
@@ -78,6 +75,11 @@ export function MainNav() {
                 </div>
               </div>
             </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/gallery" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Gallery</NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/mountain-flight" legacyBehavior passHref>
@@ -98,7 +100,7 @@ export function MainNav() {
                     <Link
                       key={index}
                       href={destination.href}
-                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-teal-50 hover:to-blue-50 hover:text-teal-600"
+                      className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
                     >
                       <div className="text-sm font-medium">{destination.title}</div>
                     </Link>
@@ -106,6 +108,11 @@ export function MainNav() {
                 </div>
               </div>
             </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/visa-application" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Visa Application</NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/contact" legacyBehavior passHref>
