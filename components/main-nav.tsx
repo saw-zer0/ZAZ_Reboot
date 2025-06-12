@@ -49,16 +49,18 @@ export function MainNav() {
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer`}>Home</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>About</NavigationMenuLink>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer`}>
+                About
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Tour Packages</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="cursor-pointer">Tour Packages</NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="w-[400px] md:w-[500px] lg:w-[600px] bg-white rounded-md shadow-lg p-4">
                 <div className="space-y-4">
@@ -71,7 +73,7 @@ export function MainNav() {
                         <Link
                           key={index}
                           href={pkg.href}
-                          className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
+                          className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600 cursor-pointer"
                         >
                           <div className="text-sm font-medium">{pkg.title}</div>
                         </Link>
@@ -86,7 +88,7 @@ export function MainNav() {
                     <div className="grid gap-3">
                       <Link
                         href="/mountain-flight"
-                        className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
+                        className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600 cursor-pointer"
                       >
                         <div className="text-sm font-medium">Mountain Flight</div>
                       </Link>
@@ -102,7 +104,7 @@ export function MainNav() {
                         <Link
                           key={index}
                           href={destination.href}
-                          className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600"
+                          className="block p-3 rounded-md hover:bg-gradient-to-r hover:from-brand-primary-50 hover:to-brand-secondary-50 hover:text-brand-primary-600 cursor-pointer"
                         >
                           <div className="text-sm font-medium">{destination.title}</div>
                         </Link>
@@ -115,22 +117,30 @@ export function MainNav() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/gallery" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Gallery</NavigationMenuLink>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer`}>
+                Gallery
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/air-ticketing" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Air Ticketing</NavigationMenuLink>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer`}>
+                Air Ticketing
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/visa-application" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Visa Application</NavigationMenuLink>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer`}>
+                Visa Application
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/contact" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} cursor-pointer`}>
+                Contact
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>

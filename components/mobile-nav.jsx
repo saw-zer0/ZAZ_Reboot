@@ -29,21 +29,21 @@ export function MobileNav({ tourPackages, otherDestinations }) {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600 cursor-pointer"
           >
             Home
           </Link>
           <Link
             href="/about"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600 cursor-pointer"
           >
             About
           </Link>
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="tour-packages" className="border-0">
-              <AccordionTrigger className="text-lg font-medium py-0">Tour Packages</AccordionTrigger>
+              <AccordionTrigger className="text-lg font-medium py-0 cursor-pointer">Tour Packages</AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-4 pl-4 mt-2">
                   {/* Nepal Treks Section */}
@@ -56,7 +56,7 @@ export function MobileNav({ tourPackages, otherDestinations }) {
                           key={index}
                           href={package_.href}
                           onClick={() => setOpen(false)}
-                          className="transition-colors hover:text-emerald-600"
+                          className="transition-colors hover:text-emerald-600 cursor-pointer"
                         >
                           {package_.title}
                         </Link>
@@ -72,7 +72,7 @@ export function MobileNav({ tourPackages, otherDestinations }) {
                       <Link
                         href="/mountain-flight"
                         onClick={() => setOpen(false)}
-                        className="transition-colors hover:text-emerald-600"
+                        className="transition-colors hover:text-emerald-600 cursor-pointer"
                       >
                         Mountain Flight
                       </Link>
@@ -89,7 +89,7 @@ export function MobileNav({ tourPackages, otherDestinations }) {
                           key={index}
                           href={destination.href}
                           onClick={() => setOpen(false)}
-                          className="transition-colors hover:text-emerald-600"
+                          className="transition-colors hover:text-emerald-600 cursor-pointer"
                         >
                           {destination.title}
                         </Link>
@@ -104,7 +104,7 @@ export function MobileNav({ tourPackages, otherDestinations }) {
           <Link
             href="/air-ticketing"
             onClick={() => setOpen(false)}
-            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600"
+            className="text-lg font-medium py-3 px-4 rounded-lg transition-colors hover:bg-brand-primary-50 hover:text-brand-primary-600 cursor-pointer"
           >
             Air Ticketing
           </Link>
